@@ -18,7 +18,7 @@ title('Entrada y salida')
 xlabel('Tiempo (s)')
 ylabel('Amplitud (V)')
 
-t_ini = tiempo(max(find(entrada == 0)));
+t_ini = tiempo(min(find(entrada ~= 0)));
 t_fin = tiempo(end);
 x_ini = find(tiempo==t_ini); 
 x_fin = find(tiempo==t_fin); 
@@ -40,9 +40,10 @@ title('Respuesta a la entrada')
 xlabel('Tiempo (s)')
 ylabel('Amplitud (V)')
 
-muestras = round(size(find(salida_interes >= 0),1)/2);
-km = mean(salida_interes(end-muestras, end));
-Tau = min(find(salida_interes >= km*0.632))*Ts;
+muestras = round(size(find(salida_interes >= 0))/2);
+c_inf = mean(salida_interes(end-muestras, end));
+Tau = (min(find(abs(salida_interes) >= abs(c_inf)*0.632))-1)*Ts;
+km = c_inf/valor_entrada;
 
 fprintf('km con entrada escalón de %dV: %.4f.\n', valor_entrada, km)
 fprintf('Tau con entrada escalón de %dV: %.4f s.\n', valor_entrada, Tau)
