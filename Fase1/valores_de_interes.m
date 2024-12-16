@@ -46,8 +46,8 @@ muestra = min(find(abs(salida_interes) >= abs(c_inf)*0.632));
 Tau = (muestra+muestra-1)/2*Ts;
 km = c_inf/valor_entrada;
 
-fprintf('km con entrada escalón de %dV: %.4f.\n', valor_entrada, km)
-fprintf('Tau con entrada escalón de %dV: %.4f s.\n', valor_entrada, Tau)
+fprintf('km con entrada escalón de %.2fV: %.4f.\n', valor_entrada, km)
+fprintf('Tau con entrada escalón de %.2fV: %.4f s.\n', valor_entrada, Tau)
 
 
 end
