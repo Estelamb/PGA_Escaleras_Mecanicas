@@ -8,7 +8,7 @@ hold on;
 plot(tiempo2,salida2);
 
 if (salida3 ~= 'null')
-    plot(tiempo3,salida3);
+    plo(tiempo3,salida3);
 end
 
 hold off;
