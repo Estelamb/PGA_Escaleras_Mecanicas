@@ -14,7 +14,7 @@ end
 hold off;
 title(texto); 
 xlabel('Tiempo (s)'); 
-ylabel('Amplitud (V)');
+ylabel('Amplitud (m/s)');
 xlim([0 5]);
 grid on;
 
