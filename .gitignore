@@ -2,5 +2,7 @@ slprj
 modeloFdeT.slxc
 modeloPert.slxc
 modeloSatDead.slxc
-sistemaTruxal.slxc
-sistemaPID.slxc
+sistemaTruxalSin.slxc
+sistemaTruxalCon.slxc
+sistemaPIDSin.slxc
+sistemaPIDCon.slxc
