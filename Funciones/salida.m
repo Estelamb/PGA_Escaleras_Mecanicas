@@ -44,12 +44,12 @@ function [km,Tau,salida_interes,tiempo_interes] = salida(salida, tiempo, Ts, val
     xlim([0 5]);
 
     if(pert == 0)
-        title(sprintf('Respuesta a la entrada escalón %.2f m/s', valor_entrada))
+        title(sprintf('Respuesta a la entrada escalón %.2f %s', valor_entrada, unidades))
         xlabel('Tiempo (s)')
         ylabel(sprintf('Amplitud (%s)', unidades))
         grid on;
     else
-        title(sprintf('Respuesta a la entrada escalón %.2f V con %d personas', valor_entrada, pert))
+        title(sprintf('Respuesta a la entrada escalón %.2f %s con %d personas', valor_entrada, unidades, pert))
         xlabel('Tiempo (s)')
         ylabel(sprintf('Amplitud (%s)', unidades))
         grid on;

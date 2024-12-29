@@ -22,7 +22,7 @@
  %}
 function [c_inf, a_inf] = escalera(BoG, Fz, entrada, pert)
     
-    g_inf = dcgain(BoG);                            % Calcular la ganancia DC del sistema
+    g_inf = dcgain(BoG);                            % Calcular la ganancia del sistema
     Mz_esc = minreal(feedback(series(Fz, BoG), 1)); % Calcular la función de transferencia en lazo cerrado para la entrada escalón
     Mz_pert = minreal(1/(1+series(Fz, BoG)));       % Calcular la función de transferencia en lazo cerrado para la perturbación
 

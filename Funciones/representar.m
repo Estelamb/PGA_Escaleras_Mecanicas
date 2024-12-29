@@ -28,12 +28,12 @@ function [salida,tiempo] = representar(archivo, valor_entrada, unidades, pert)
     hold off 
 
     if(pert == 0)          
-        title(sprintf('Entrada y salida con escalón %.2f V', valor_entrada))
+        title(sprintf('Entrada y salida con escalón %.2f %s', valor_entrada, unidades))
         xlabel('Tiempo (s)')
         ylabel(sprintf('Amplitud (%s)', unidades))
         grid on;
     else
-        title(sprintf('Entrada y salida con escalón %.2f V con %d personas', valor_entrada, pert))
+        title(sprintf('Entrada y salida con escalón %.2f %s con %d personas', valor_entrada, unidades, pert))
         xlabel('Tiempo (s)')
         ylabel(sprintf('Amplitud (%s)', unidades))
         grid on;
